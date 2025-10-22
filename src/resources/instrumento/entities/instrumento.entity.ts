@@ -6,6 +6,7 @@ export class Instrumento {
     // @Prop({ type: mongoose.Schema.Types.ObjectId }) // Definición del campo _id como ObjectId
     _id: ObjectId;
 
+    // datos que vienen del DTO
     @Prop({required: true})
     nombre: string;
 
@@ -18,6 +19,10 @@ export class Instrumento {
     // Array
     @Prop({type: [String]})
     accesorios: string[];
+
+    // valor por defecto, fecha actual
+    @Prop({default: Date.now})
+    fechaCreacion: Date;
 
 }
 
