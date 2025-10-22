@@ -3,7 +3,7 @@ import mongoose, {type ObjectId } from "mongoose";
 
 @Schema() // Decorador que marca una colección en la base de datos.
 export class Instrumento {
-    @Prop({ type: mongoose.Schema.Types.ObjectId }) // Definición del campo _id como ObjectId
+    // @Prop({ type: mongoose.Schema.Types.ObjectId }) // Definición del campo _id como ObjectId
     _id: ObjectId;
 
     @Prop({required: true})
